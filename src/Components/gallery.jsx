@@ -9,11 +9,11 @@ function Gallery() {
    return (
   <section className='gallery'>
     {data.map((item) => (
-      <Link to={`/logement/${item.id}`}>
-      <div key={item.id}>
+      <Link key={item.id} to={`/logement/${item.id}`}>
+      
         <img src={item.cover} alt={item.title} />
         <p>{item.title}</p>
-      </div>
+      
       </Link>
     ))}
   </section>
