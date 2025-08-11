@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import useLogement from '../hooks/useLogement';
 import CollapseItem from '../Components/Collapsetem';
+import Carousel from '../Components/carousel';
 
 export default function Logement() {
     const { id } = useParams();
@@ -14,6 +15,7 @@ export default function Logement() {
 
     return (
         <>
+        <Carousel/>
             <div className='container'> 
                 <div className='TitreInfo'>
                     <h2>{data.title}</h2>
@@ -26,12 +28,12 @@ export default function Logement() {
 
                 </div>
 
-                <div>
+                <div className='infoHost'>
                     <div className='host'>
                         <p>{data.host.name}</p>
                         <img src={data.host.picture} alt={"Photo de" + data.host.name} />
                     </div>
-                    <div className='rating' style={{ fontSize: '36px' }}>
+                    <div className='rating'>
                         <span style={{ color: '#FF6060' }}>
                             {'★'.repeat(Number(data.rating))}
                         </span>
