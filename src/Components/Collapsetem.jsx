@@ -26,9 +26,9 @@ function CollapseItem({ title, content }) {
           height: isOpen ? contentHeight : 0,
           overflow: 'hidden',
           transition: 'height 0.3s ease',
-        }}
+        }} className='contenu'
       >
-        <div ref={ref}>
+        <div ref={ref} >
           <span>{content}</span>
         </div>
       </div>

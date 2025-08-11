@@ -3,7 +3,7 @@ import TableauAPropos from '../data/infosAPropos.json'
 
 function Apropos() {
      return (
-    <div>
+    <div className='bodyAPropos'>
       {TableauAPropos.map(item => (
         <CollapseItem key={item.title} title={item.title} content={item.content} />
       ))}
