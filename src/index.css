@@ -105,14 +105,20 @@ header li {
   margin-bottom: 64px ;
 }
 
+
+
 .info{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color:#FF6060 ;
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  height: 52px;
+  padding-right: 16px;
   padding-left: 16px;
-  padding-left: 16px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin-top: 16px;
   margin-bottom: 0px;
 }
@@ -121,6 +127,19 @@ header li {
 .contenu{
   background-color: #eee;
   padding: 16px;
+  text-align: left
+}
+
+
+.fleche {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.flecheOuverte {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 

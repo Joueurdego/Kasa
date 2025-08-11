@@ -19,16 +19,17 @@ function CollapseItem({ title, content }) {
     <div className='apropos' >
       <div className='info'>
         <h3 >{title}</h3>
-        <img src={fleche} alt="bouton d'ouvertue d'information" onClick={() => setIsOpen(!isOpen)} />
+        <img src={fleche} alt="bouton d'ouvertue d'information" onClick={() => setIsOpen(!isOpen)}  className={isOpen ? 'flecheOuverte' : 'fleche'}/>
       </div>
       <div
         style={{
           height: isOpen ? contentHeight : 0,
           overflow: 'hidden',
           transition: 'height 0.3s ease',
-        }} className='contenu'
+          padding: '0px 2px' ,
+        }} 
       >
-        <div ref={ref} >
+        <div ref={ref} className='contenu'>
           <span>{content}</span>
         </div>
       </div>
