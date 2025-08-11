@@ -2,7 +2,7 @@
 
 html,
 body {
-  
+
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
 }
@@ -24,9 +24,15 @@ header {
   margin-bottom: 32px;
 }
 
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
 header ul {
   display: flex;
-  list-style-type: none;
+  
 }
 
 header li {
@@ -67,8 +73,8 @@ header li {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 32px;
   border-radius: 15px;
-   gap: 32px;
-   margin-bottom: 64px;
+  gap: 32px;
+  margin-bottom: 64px;
 }
 
 .gallery a {
@@ -100,18 +106,18 @@ header li {
   font-weight: bold;
 }
 
-.bodyAPropos{
+.bodyAPropos {
   margin-top: 64px;
-  margin-bottom: 64px ;
+  margin-bottom: 64px;
 }
 
 
 
-.info{
+.info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#FF6060 ;
+  background-color: #FF6060;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -124,7 +130,7 @@ header li {
 }
 
 
-.contenu{
+.contenu {
   background-color: #eee;
   padding: 16px;
   text-align: left
@@ -147,15 +153,75 @@ footer {
   padding: 32px;
   margin: 0 auto;
   max-width: 1440px;
-  background:black;
-  height:209px ;
+  background: black;
+  height: 209px;
   color: white;
   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
+
 footer img {
   filter: brightness(0) invert(1);
+}
+
+.TitreInfo {
+  text-align: left
+}
+
+
+.TitreInfo h2 {
+  font-size: 36px;
+  color: #FF6060;
+  margin-bottom: 16px;
+}
+
+.TitreInfo p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.TitreInfo span {
+  font-size: 14px;
+  background-color: #FF6060;
+  border-radius: 15px;
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+
+.collapse {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.host img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+.host {
+  display: flex;
+  color: #FF6060;
+  gap: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 }
