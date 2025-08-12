@@ -1,37 +1,51 @@
-import React, { useState } from 'react';
-import useLogement from '../hooks/useLogement'; // j’imagine que c’est ici que tu importes ton hook
-
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import useLogement from "../hooks/useLogement";
 
 function Carousel() {
-  const { logement, loading, error } = useLogement(); // ici je suppose que ton hook renvoie un seul logement
+  const { id } = useParams();
+  const { loading, error, data } = useLogement(id);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (loading) return <p>Chargement...</p>;
-  if (error) return <p>Erreur lors du chargement des images</p>;
-  if (!logement) return <p>Logement introuvable</p>;
+  if (loading) return <span>Chargement en cours</span>;
+  if (error) return <span>Erreur</span>;
+  if (!data || !data.pictures || data.pictures.length === 0) {
+    return <span>Aucune donnée</span>;
+  }
 
-  const images = logement.pictures;
+  const total = data.pictures.length;
 
-  const prev = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % total);
   };
 
-  const next = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + total) % total);
   };
 
   return (
-    <div style={{ width: '600px', margin: 'auto', textAlign: 'center' }}>
-      <img
-        src={images[currentIndex]}
-        alt={`Image ${currentIndex + 1}`}
-        style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-      />
-      <div style={{ marginTop: 10 }}>
-        <button onClick={prev} style={{ marginRight: 10 }}>Prev</button>
-        <button onClick={next}>Next</button>
+    <div className="carousel">
+      <button className="btn prev" onClick={prevSlide}>
+        &#10096;
+      </button>
+      <button className="btn next" onClick={nextSlide}>
+        &#10097;
+      </button>
+
+      <ul
+        className="carousel-track"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {data.pictures.map((image, index) => (
+          <li key={index} className="slide">
+            <img src={image} alt={`Image ${index + 1} de ${data.title}`} />
+          </li>
+        ))}
+      </ul>
+
+      <div className="counter">
+        {currentIndex + 1} / {total}
       </div>
-      <p>{currentIndex + 1} / {images.length}</p>
     </div>
   );
 }
