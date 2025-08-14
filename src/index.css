@@ -217,10 +217,16 @@ footer img {
 
 .host {
   display: flex;
+  align-items: center;
   color: #FF6060;
   gap: 16px;
   font-weight: bold;
   font-size: 18px;
+  gap: 50px;
+}
+.host p {
+ width: 40px; 
+  white-space: normal;
 }
 
 .container {
@@ -515,5 +521,11 @@ order: 1;
 }
 .linkHome {
   font-size: 12px;
+}
+
+
+.host p {
+ width: 10px; 
+  white-space: normal;
 }
 }
