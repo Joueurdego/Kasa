@@ -17,6 +17,7 @@ main {
   margin: 0 auto;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -134,9 +135,10 @@ header li {
 
 
 .contenu {
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 16px;
   text-align: left
+
 }
 
 
@@ -219,14 +221,15 @@ footer img {
   display: flex;
   align-items: center;
   color: #FF6060;
-  gap: 16px;
+  gap: auto;
   font-weight: bold;
   font-size: 18px;
-  gap: 50px;
+  
 }
 .host p {
- width: 40px; 
+ width: 90px; 
   white-space: normal;
+  text-align: left;
 }
 
 .container {
@@ -485,6 +488,7 @@ header img {
 .host{
   font-size: 12px;
   order: 2;
+  gap: auto;
 }
 
 .rating {
@@ -525,7 +529,8 @@ order: 1;
 
 
 .host p {
- width: 10px; 
+ width: 65px; 
   white-space: normal;
+  
 }
 }

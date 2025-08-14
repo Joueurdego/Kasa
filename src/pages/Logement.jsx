@@ -1,4 +1,4 @@
-import { useParams,  } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import useLogement from '../hooks/useLogement';
 import CollapseItem from '../Components/Collapsetem';
 import Carousel from '../Components/carousel';
@@ -8,15 +8,17 @@ export default function Logement() {
     const { data, loading, error } = useLogement(id);
 
 
-    if (loading) return <p>Chargement</p>; 
-    if (error) return <p>Erreur lors du chargement.</p>;
-    if (!data) return null;
+
+    if (loading) return <p>Chargement...</p>;
+    if (!data || error || !data.id) {
+        return <Navigate to="/404" replace />;
+    }
 
 
     return (
         <>
-        <Carousel/>
-            <div className='container'> 
+            <Carousel />
+            <div className='container'>
                 <div className='TitreInfo'>
                     <h2>{data.title}</h2>
                     <p>{data.location}</p>
