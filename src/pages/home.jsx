@@ -1,6 +1,6 @@
 
 import Banner from '../Components/banner.jsx';
-import Gallery from '../Components/Gallery.jsx';
+import Gallery from '../Components/gallery.jsx';
 import BannerImg from '../assets/Image source 1.png'
 
 

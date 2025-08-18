@@ -1,16 +1,30 @@
 import Logo from '../assets/.LOGO.png'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
         <header>
             <img src={Logo} alt="logo" />
             <ul>
-                <li><Link to="/Home">Accueil</Link></li>
-                <li><Link to="/Apropos">À propos</Link></li>
+                <li>
+                    <NavLink 
+                        to="/Home" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
+                        Accueil
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                        to="/Apropos" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
+                        À propos
+                    </NavLink>
+                </li>
             </ul>
+        </header>
+    );
+}
 
-        </header>);
-};
-
-export default Header
+export default Header;

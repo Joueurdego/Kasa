@@ -25,13 +25,16 @@ function Carousel() {
 
   return (
     <div className="carousel">
-      <button className="btn prev" onClick={prevSlide}>
-        &#10096;
-      </button>
-      <button className="btn next" onClick={nextSlide}>
-        &#10097;
-      </button>
-
+      {total > 1 && (
+        <>
+          <button className="btn prev" onClick={prevSlide}>
+            &#10096;
+          </button>
+          <button className="btn next" onClick={nextSlide}>
+            &#10097;
+          </button>
+        </>
+      )}
       <ul
         className="carousel-track"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
