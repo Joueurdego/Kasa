@@ -1,6 +1,6 @@
 # Kasa – Application de location immobilière (React)
 
-![Logo Kasa](assets/.LOGO.png)
+![Logo Kasa](src/assets/.LOGO.png)
 
 ## Description
 Kasa est une application web de location d’appartements entre particuliers.  
