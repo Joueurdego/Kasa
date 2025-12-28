@@ -42,6 +42,7 @@ Exécuter :
 ### 3. Lancer le projet
 
 `````cd frontend`````
+
 `````npm run dev`````
 
 L'application sera accessible sur http://localhost:5173 par défaut.
