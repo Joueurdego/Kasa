@@ -1,12 +1,51 @@
-# React + Vite
+# Kasa – Application de location immobilière (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Logo Kasa](assets/.LOGO.png)
 
-Currently, two official plugins are available:
+## Description
+Kasa est une application web de location d’appartements entre particuliers.  
+Ce projet consiste à développer la **refonte complète du front-end** du site en **React**, à partir de maquettes Figma fournies, en consommant une API existante.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Objectifs du projet
+- Démarrer une application React avec Vite
+- Développer une application front-end complète et responsive
+- Mettre en place la navigation avec React Router
+- Créer des composants réutilisables
+- Implémenter des animations et interactions (Gallery, Collapse)
+- Mettre en place des tests unitaires
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technologies utilisées
+- React
+- Vite
+- React Router
+- JavaScript
+- CSS 
+- Tests unitaires
+
+---
+
+## Installation et lancement
+
+### 1. Cloner le repository
+
+`````git clone https://github.com/Joueurdego/Kasa.git`````
+
+### 2. se placer dans le dossier racine
+
+Exécuter : 
+`````docker-compose up`````
+
+### 3. Lancer le projet
+
+`````cd frontend`````
+`````npm run dev`````
+
+L'application sera accessible sur http://localhost:5173 par défaut.
+
+## Auteur
+Projet réalisé par **[Conte Virgile]**  
+Développeur front-end
